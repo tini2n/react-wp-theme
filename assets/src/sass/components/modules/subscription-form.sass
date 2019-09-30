@@ -1,0 +1,374 @@
+.subscription-form
+
+	.product-description
+		color: $medium-gray
+
+	.exclamation-icon,
+	.ok-icon
+		display: block
+		width: 120px
+		margin-left: auto
+		+breakpoint-max(767)
+			margin: 0 auto
+
+	.ok-icon
+		position: relative
+		height: 120px
+		border: 4px solid $green
+			radius: 50%
+		color: $green
+
+		svg
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%) translateY(-50%)
+			width: 70px
+			height: 50px
+
+	.subscription-item
+		float: left
+		width: 250 / 520 * 100%
+		+breakpoint-max(767)
+			width: 100%
+			margin: 10px 0
+
+		&:nth-child(odd)
+			margin-right: 20 / 520 * 100%
+			+breakpoint-max(767)
+				margin-right: 0
+
+		&:last-child
+			+breakpoint-max(767)
+				margin-bottom: 0
+
+	p
+		margin-bottom: 15px
+
+	p, ul, ol, h4
+		font:
+			family: $font-ibm
+			size: 18px
+		line-height: 24px
+
+	h4
+		margin-bottom: 30px
+		padding: 0 10px
+		+breakpoint-max(767)
+			margin-bottom: 10px
+
+	h3
+		font:
+			size: 18px
+			weight: 700
+		line-height: 28px
+		text-transform: uppercase
+		+breakpoint-max(767)
+			margin-bottom: 10px
+
+	li
+		position: relative
+		margin-bottom: 20px
+		padding-left: 40px
+
+		&:before
+			content: ''
+			position: absolute
+			top: 8px
+			left: 0
+			display: block
+			width: 14px
+			height: 10px
+			background:
+				image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDE0IDEwIj4gIDxwYXRoIGlkPSJvay1pY29uIiBmaWxsPSIjNjZiMzBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGRhdGEtbmFtZT0ib2staWNvbiIgY2xhc3M9ImNscy0xIiBkPSJNMTE5NC42MSwyMDIuMTg3bC03LjYyLDcuNDMxYTEuMzUxLDEuMzUxLDAsMCwxLTEuODcsMEwxMTgxLjM4LDIwNmExLjI0NSwxLjI0NSwwLDAsMSwwLTEuODEsMS4zNTEsMS4zNTEsMCwwLDEsMS44NywwbDIuODEsMi43MTcsNi42Ny02LjUyOGExLjM2NiwxLjM2NiwwLDAsMSwxLjg4LDBBMS4yNjQsMS4yNjQsMCwwLDEsMTE5NC42MSwyMDIuMTg3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExODEgLTIwMCkiLz48L3N2Zz4=)
+				repeat: no-repeat
+
+	.plus-label
+		display: flex
+		background: transparent
+		padding: 0
+		+breakpoint-max(767)
+			margin-bottom: 10px
+
+		.icon
+			padding: 5px 5px 1px 10px
+			border: 1px solid $light-gray
+				radius: 15px 0 0 15px
+
+		span
+			background: $light-gray
+			color: $dark-gray
+			padding: 7px 15px 7px 10px
+			border:
+				radius: 0 15px 15px 0
+			font-size: 13px
+
+	.input-item
+		margin-bottom: 20px
+
+	.error-msg
+		margin-top: 2px
+		color: $red
+		font-family: $font-sans
+		font-size: 11px
+		line-height: 16px
+		text-transform: uppercase
+		clear: both
+
+	.input-item,
+	.checkbox-item
+
+		&.error
+
+			input,
+			span
+				border-color: $red
+
+			svg
+				color: $red
+
+	.checkbox-item
+		border-top: 0
+
+		&:not(:last-of-type)
+			margin-bottom: 20px
+
+		label
+			padding: 0 0 0 50px
+			font-weight: 400
+			line-height: 22px
+			text-transform: none
+
+		span
+			top: 0
+			right: auto
+			left: 0
+			transform: none
+
+	.row
+		padding: 40px 0
+		+clearfix
+		+breakpoint-max(767)
+			padding: 20px 0
+
+		&:not(:last-child)
+			border-bottom: 2px dotted $semi-light-gray
+
+		&.with-icon
+			display: flex
+			align-items: center
+			+breakpoint-max(767)
+				flex-direction: column
+
+	.col-inner
+		position: relative
+		width: 250 / 520 * 100%
+		float: left
+		+breakpoint-max(767)
+			width: 100%
+			float: none
+
+		&:nth-child(odd)
+			margin-right: 20 / 520 * 100%
+			+breakpoint-max(767)
+				margin-right: 0
+
+	.submit
+		display: block
+		width: 100%
+		margin: 40px 0
+		padding: 17px 20px
+		border-radius: 25px
+		background: $green
+		color: $white
+		text-align: center
+		font:
+			size: 16px
+			weight: 700
+		line-height: 1
+		letter-spacing: 1px
+		text-transform: uppercase
+		cursor: pointer
+
+	.calendar-icon
+		position: absolute
+		top: 14px
+		right: 15px
+		color: $semi-light-gray
+		pointer-events: none
+
+	.col-1-3,
+	.col-2-3,
+	.col-2-4
+		float: left
+		+clearfix
+
+		& > .row
+			padding: 0
+			border: 0
+
+	.col-1-3
+		width: 280 / 800 * 100%
+		+breakpoint-max(767)
+			width: 100%
+
+	.col-2-3
+		width:  520 / 800 * 100%
+		+breakpoint-max(767)
+			width: 100%
+
+		&:before
+			transition: .2s ease opacity
+
+		&.loading
+			position: relative
+			top: auto
+			left: auto
+			transform: none
+
+			&:before
+				background-color: $white
+				opacity: .6
+
+	.react-datepicker
+		width: 100%
+		padding: 30px 40px 40px
+		border: 0
+		border-radius: 0
+		box-shadow: 0 10px 30px 0 rgba($black, .1)
+		font-family: $font-sans
+		+breakpoint-max(767)
+			max-width: 320px
+
+		&__month
+			margin: 0
+
+		&__day-name
+			width: 30px
+			height: 30px
+			margin: 0 5px 0 0
+			text-transform: uppercase
+			font-size: 10px
+
+			&:last-child
+				margin-right: 0
+
+		&__day
+			width: 30px
+			height: 30px
+			margin: 0 5px 5px 0
+			font:
+				size: 12px
+				weight: 700
+			+hover
+				border-radius: 0
+
+			&:last-child
+				margin-right: 0
+
+			&--outside-month
+				opacity: .5
+				font-weight: 400
+
+			&--in-range,
+			&--in-selecting-range
+				border-radius: 0
+				background: $cal-range-day
+
+			&--selected,
+			&--keyboard-selected,
+			&--range-start
+				color: $white
+				border-radius: 0
+				background: $cal-active-day
+
+		&__navigation
+			top: 32px
+			display: inline-block
+			width: 0
+			height: 0
+			padding: 3px
+			border: solid $gray
+			border-width: 0 2px 2px 0
+
+			&--previous
+				left: 55px
+				transform: rotate(135deg)
+
+			&--next
+				right: 55px
+				transform: rotate(-45deg)
+
+		&__triangle
+			display: none
+
+		&__header
+			padding-top: 0
+			border-bottom: 0
+			background: transparent
+
+		&__current-month
+			margin-bottom: 15px
+			font:
+				size: 12px
+				weight: 400
+			line-height: 1
+			text-transform: uppercase
+			letter-spacing: 1px
+
+		&-wrapper
+			position: relative
+			display: block
+
+		&-popper
+			top: 60px !important
+			transform: none !important
+			width: 320px
+			margin-top: 0
+			+breakpoint-max(767)
+				text-align: center
+
+		&__input-container
+			display: block
+
+			input
+				display: block
+				width: 100%
+				padding: 13.5px 17px
+				border: 2px solid $medium-light-gray
+				font:
+					family: $font-sans
+					size: 14px
+				line-height: 1
+				text-transform: uppercase
+				transition: border-color .2s ease
+
+				&:focus
+					box-shadow: inset 0px 0px 5px 0 rgba($red, 1)
+
+	.react-select
+		&-container
+			font:
+				family: $font-sans
+				size: 14px
+		&__control
+			border-radius: 0
+			border: 2px solid $medium-light-gray
+			box-shadow: none
+			&:hover
+				border-color: $medium-light-gray
+		&__value-container
+			height: 50px
+			padding: 13.5px 17px
+			font:
+				family: $font-sans
+				size: 14px
+			line-height: 1
+			text-transform: uppercase
+		&__indicators
+		&__indicator-separator
+			display: none
+		&__menu
+			border-radius: 0
+		&__option
+			padding-left: 17px

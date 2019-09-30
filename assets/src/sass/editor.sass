@@ -1,0 +1,96 @@
+@import sprite/sprite
+@import constants/list
+@import mixins/list
+@import components/list
+@import layout/list
+
+.wp-editor
+	max-width: 800px
+	margin: 20px auto !important
+	@extend %content
+
+	.wpview
+		width: auto
+		clear: none
+		margin-bottom: 0
+		border: 0
+
+	.aligncenter
+		width: 100% !important
+
+.connect_id_subscriptions_subscription_full_text
+	padding: 20px !important
+
+	p, ul, li, h4
+		font:
+			family: $font-ibm
+			size: 18px
+		line-height: 24px
+
+	h4
+		margin-bottom: 30px
+		padding: 0 10px
+		+breakpoint-max(767)
+			margin-bottom: 10px
+
+	h3
+		font:
+			size: 18px
+			weight: 700
+		line-height: 28px
+		text-transform: uppercase
+		+breakpoint-max(767)
+			margin-bottom: 10px
+
+	ul, ol
+
+		li
+			position: relative
+			margin-bottom: 20px !important
+			padding-left: 40px !important
+			text-indent: 0
+
+			&:before
+				content: ''
+				position: absolute
+				top: 6px
+				left: 0
+				display: block
+				width: 14px
+				height: 10px
+				border: none
+				background:
+					image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDE0IDEwIj4gIDxwYXRoIGlkPSJvay1pY29uIiBmaWxsPSIjNjZiMzBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGRhdGEtbmFtZT0ib2staWNvbiIgY2xhc3M9ImNscy0xIiBkPSJNMTE5NC42MSwyMDIuMTg3bC03LjYyLDcuNDMxYTEuMzUxLDEuMzUxLDAsMCwxLTEuODcsMEwxMTgxLjM4LDIwNmExLjI0NSwxLjI0NSwwLDAsMSwwLTEuODEsMS4zNTEsMS4zNTEsMCwwLDEsMS44NywwbDIuODEsMi43MTcsNi42Ny02LjUyOGExLjM2NiwxLjM2NiwwLDAsMSwxLjg4LDBBMS4yNjQsMS4yNjQsMCwwLDEsMTE5NC42MSwyMDIuMTg3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExODEgLTIwMCkiLz48L3N2Zz4=) !important
+					repeat: no-repeat
+				transform: none
+
+
+.connect_id_subscriptions_subscription_text,
+.connect_id_subscriptions_subscription_1_text,
+.connect_id_subscriptions_subscription_2_text
+	padding: 20px !important
+	font-family: $font-sans
+	font-size: 14px
+	line-height: 1.2
+	font-weight: 400
+
+	li
+		position: relative
+		font-size: 14px
+		font-weight: 400
+		line-height: 1
+		letter-spacing: -.15px
+		text-indent: 0 !important
+
+		&:before
+			display: none !important
+
+		&:after
+			content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDE0IDEwIj4gIDxwYXRoIGlkPSJvay1pY29uIiBmaWxsPSIjNjZiMzBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGRhdGEtbmFtZT0ib2staWNvbiIgY2xhc3M9ImNscy0xIiBkPSJNMTE5NC42MSwyMDIuMTg3bC03LjYyLDcuNDMxYTEuMzUxLDEuMzUxLDAsMCwxLTEuODcsMEwxMTgxLjM4LDIwNmExLjI0NSwxLjI0NSwwLDAsMSwwLTEuODEsMS4zNTEsMS4zNTEsMCwwLDEsMS44NywwbDIuODEsMi43MTcsNi42Ny02LjUyOGExLjM2NiwxLjM2NiwwLDAsMSwxLjg4LDBBMS4yNjQsMS4yNjQsMCwwLDEsMTE5NC42MSwyMDIuMTg3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExODEgLTIwMCkiLz48L3N2Zz4=)
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 0
+
+		&:not(:last-child)
+			margin-bottom: 20px

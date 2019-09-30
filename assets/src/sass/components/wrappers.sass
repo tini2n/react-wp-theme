@@ -1,0 +1,66 @@
+.global-wrapper
+    position: relative
+    flex: 1 0 auto
+    box-sizing: border-box
+
+.main-layout
+    padding-top: 80px
+
+.main-wrapper
+    position: relative
+    flex: 1 0 auto
+    width: 100%
+    box-sizing: border-box
+    overflow: hidden
+    +breakpoint-max(1200)
+        padding-top: 50px
+    +bodyclass(with-partner)
+        padding-top: 140px
+        +breakpoint-max(1200)
+            padding-top: 110px 
+        +breakpoint-max(767)
+            padding-top: 110px
+    +bodyclass(search-results, search-no-results)
+        padding-top: 220px
+        +breakpoint-max(1200)
+            padding-top: 150px
+
+.wrapper-outer
+    max-width: $wrapper-outer
+    margin: 0 auto
+    padding-left: $wrapper-outer-padding
+    padding-right: $wrapper-outer-padding
+    box-sizing: border-box
+    +breakpoint-max(767)
+        padding:
+            left: $wrapper-inner-padding / 1.5
+            right: $wrapper-inner-padding / 1.5
+
+.wrapper
+    max-width: $wrapper-inner
+    margin: 0 auto
+    padding-left: $wrapper-inner-padding
+    padding-right: $wrapper-inner-padding
+    box-sizing: border-box
+    +breakpoint-max(767)
+        padding:
+            left: $wrapper-inner-padding / 1.5
+            right: $wrapper-inner-padding / 1.5
+
+.wrapper-thin
+    max-width: $wrapper-thin
+    margin: 0 auto
+    padding-left: $wrapper-inner-padding
+    padding-right: $wrapper-inner-padding
+    +breakpoint-max(767)
+        padding-left: $wrapper-padding
+        padding-right: $wrapper-padding
+
+#content
+    @extend .wrapper-thin
+    padding-top: 40px
+    padding-bottom: 40px
+    +breakpoint-max(767)
+        padding-top: 20px
+        padding-bottom: 20px
+        

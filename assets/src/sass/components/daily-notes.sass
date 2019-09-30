@@ -1,0 +1,56 @@
+.daily-notes
+	padding: 40px 0
+	+breakpoint-max(767)
+		padding: 20px 0
+
+	& + .loading
+		position: fixed
+		width: 100%
+		height: 100%
+
+		&:before
+			background-color: $white
+			opacity: 1
+
+	.load-more
+		padding-bottom: 0
+
+		button
+			width: 100%
+
+	.grid-container
+		position: relative
+		display: flex
+		padding-bottom: 30px
+		margin-bottom: 30px
+		+breakpoint-max(767)
+			flex-wrap: wrap
+
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: calc(100% - (30 / 1020 * 100%))
+			border-bottom: 2px dotted $semi-light-gray
+
+	.notes
+		+breakpoint-max(767)
+			margin-bottom: 20px
+
+	.grid-3-6
+
+		& > .section-title
+			padding: 10px 0
+			text-align: right
+			line-height: 24px
+			border-color: $semi-light-gray
+			+breakpoint-max(767)
+				text-align: left
+
+	iframe
+		display: block
+		width: 100%
+		height: calc(100% - 65px)
+		+breakpoint-max(767)
+			height: 400px

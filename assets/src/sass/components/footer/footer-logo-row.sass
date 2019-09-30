@@ -1,0 +1,91 @@
+.footer-logo-row
+	display: flex
+	+breakpoint-max(767)
+		flex-wrap: wrap
+		padding-top: 20px
+
+	.phone-bar
+		display: flex
+		align-items: center
+		border-bottom: 1px solid rgba($white, .1)
+		width: 1070 / 1340 * 100%
+		padding-left: 10px
+		+breakpoint-max(767)
+			flex-wrap: wrap
+			flex-direction: column
+			justify-content: space-around
+			width: 100%
+			padding-bottom: 20px
+
+	.to-top
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		border: 2px solid rgba($white, .2)
+		margin-left: 20px
+		background: $black
+		cursor: pointer
+		+breakpoint-max(767)
+			margin: 0 auto
+
+		svg
+			position: relative
+			top: -2px
+			color: $red
+			transform: rotate(180deg)
+
+	nav
+		+breakpoint-max(767)
+			margin: 10px 0 30px
+
+		a
+			padding: 10px 20px
+			border-radius: 20px
+			background: rgba($white, .2)
+			text-transform: uppercase
+			font:
+				family: $font-sans
+				size: 14px
+				weight: 700
+
+	.phone
+		margin-right: auto
+		+breakpoint-max(767)
+			width: 100%
+			margin:
+				right: 0
+				bottom: 20px
+
+		small, a
+			display: block
+
+		small
+			color: $gray
+			text-transform: uppercase
+			font:
+				family: $font-sans
+				weight: 700
+				size: 13px
+			line-height: 1
+
+		a
+			font:
+				family: $font-sans
+				weight: 700
+				size: 24px
+			line-height: 28px
+
+	.logo
+		min-width: 190px
+		width: 190px
+		margin-right: 100 / 1340 * 100%
+		+breakpoint-max(767)
+			display: none
+
+		svg
+			width: 100%
+
+		a
+			display: block
+			padding: 30px 20px 15px
+			background: $red

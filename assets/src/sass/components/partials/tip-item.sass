@@ -1,0 +1,78 @@
+.tip-item
+
+	.thumbnail-container
+		position: relative
+		min-height: 25px
+		padding-bottom: 56.25%
+		background: $light-gray
+		overflow: hidden
+		transition: opacity .2s ease
+		+hover
+			opacity: .8
+
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%) translateY(-50%)
+			display: block
+
+		.placeholder-icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%) translateY(-50%)
+			display: block
+			opacity: .25
+			filter: grayscale(1)
+			pointer-events: none
+
+
+	.labels
+		position: absolute
+		left: 0
+		bottom: 0
+		display: flex
+		background: $light-gray
+		padding: 5px 5px 0 0
+		text-align: center
+
+		span
+			width: 40px
+			height: 20px
+			background: $semi-dark-gray
+			color: $white
+			font:
+				size: 14px
+				weight: 700
+			line-height: 20px
+			text-transform: uppercase
+
+			&:not(:last-of-type)
+				margin-right: 5px
+
+	.text-container
+		padding: 10px
+
+		time
+			display: block
+			margin-bottom: 10px
+			color: $semi-dark-gray
+			font:
+				size: 11px
+				weight: 700
+			line-height: 1
+			text-transform: uppercase
+
+		.title
+			margin-bottom: 0
+			font:
+				size: 22px
+				weight: 700
+			line-height: 28px
+
+		.excerpt
+			font:
+				family: $font-ibm
+				size: 14px
+			line-height: 24px

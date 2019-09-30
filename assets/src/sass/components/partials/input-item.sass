@@ -1,0 +1,33 @@
+.input-item
+
+	&.is-error
+
+		[type="text"],
+		[type="number"],
+		[type="phone"],
+		[type="email"]
+			border-color: $red
+
+	[type="text"],
+	[type="number"],
+	[type="phone"],
+	[type="email"]
+		display: block
+		width: 100%
+		padding: 13.5px 17px
+		border: 2px solid $medium-light-gray
+		color: $black
+		font:
+			family: $font-sans
+			size: 14px
+		line-height: 1
+		letter-spacing: 1px
+		text-transform: uppercase
+		transition: border-color .2s ease
+		+placeholder
+			color: $dark-gray
+
+	.error-msg
+		font-size: 11px
+		color: $red
+		text-transform: uppercase

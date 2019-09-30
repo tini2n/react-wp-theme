@@ -1,0 +1,78 @@
+.note-item
+
+	&.is-read-more
+
+		.text-container
+			max-height: 180px
+
+			&:after
+				pointer-events: auto
+				opacity: 1
+
+		.read-more
+			display: block
+
+		.read-more
+			pointer-events: auto
+			opacity: 1
+
+	.text-container
+		position: relative
+		margin-bottom: 10px
+		overflow: hidden
+		transition: max-height .2s ease
+
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 50%
+			background: linear-gradient(to bottom, rgba($white, 0) 0%,rgba($white, 1) 100%)
+			opacity: 0
+			pointer-events: none
+			transition: opacity .2s ease
+			z-index: 1
+
+	.category-label
+		margin-bottom: 6px
+		color: $gray
+		font:
+			family: $font-sans
+			size: 11px
+			weight: 700
+		line-height: 1
+		text-transform: uppercase
+
+	.title
+		margin-bottom: 8px
+		font:
+			family: $font-ibm
+			size: 20px
+			weight: 700
+		line-height: 24px
+
+	.lead
+		position: relative
+		font:
+			family: $font-ibm
+			size: 16px
+			weight: 400
+		line-height: 22px
+		letter-spacing: -.1px
+
+	.read-more
+		display: none
+		color: $red
+		font:
+			family: $font-sans
+			weight: 700
+			size: 11px
+		line-height: 24px
+		letter-spacing: 1px
+		text-transform: uppercase
+		cursor: pointer
+		opacity: 0
+		pointer-events: none
+		transition: opacity .2s ease

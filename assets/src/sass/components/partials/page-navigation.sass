@@ -1,0 +1,99 @@
+.page-navigation
+	position: absolute
+	right: -30 / 670 * 100%
+	top: 0
+	transform: translateX(100%)
+	width: 320 / 670 * 100%
+	font-family: $font-sans
+	transition: box-shadow .2s ease
+	backface-visibility: hidden
+	+breakpoint-max(767)
+		position: relative
+		right: 0
+		transform: none
+		width: 100%
+		margin: 10px 0
+
+	&.is-opened
+		box-shadow: 0px 5px 10px rgba($black, .2)
+
+		.mobile-toggler
+			+breakpoint-max(767)
+				transform: translateY(calc(-50% - 1px)) rotate(180deg)
+
+		nav
+			+breakpoint-max(767)
+				pointer-events: auto
+				box-shadow: 0px 5px 10px rgba($black, .2)
+				transform: translateY(100%) scaleY(1)
+
+	.mobile-toggler
+		display: none
+		position: absolute
+		top: 50%
+		right: 15px
+		transform: translateY(-50%)
+		transition: transform .2s ease
+		color: $red
+		+breakpoint-max(767)
+			display: block
+
+		svg
+			display: block
+
+	nav
+		+breakpoint-max(767)
+			position: absolute
+			bottom: 0
+			left: 0
+			transform: translateY(100%) scaleY(0)
+				origin: top
+			width: 100%
+			background: $white
+			pointer-events: none
+			transition: transform .2s ease, box-shadow .2s ease
+			z-index: 1
+
+	.title
+		padding: 20px 30px 22px
+		border-top: 4px solid $red
+		background: $light-gray
+		font:
+			weight: 700
+			size: 15px
+		line-height: 1
+		letter-spacing: .5px
+		text-transform: uppercase
+		+breakpoint-max(767)
+			padding: 15px
+
+	a
+		position: relative
+		display: block
+		border-bottom: 1px solid $light-gray
+		padding: 10.5px 30px
+		font:
+			size: 16px
+			weight: 600
+		transition: padding .2s ease
+		+breakpoint-max(767)
+			padding: 10px 15px
+
+		&:before
+			content: ''
+			position: absolute
+			left: 15px
+			top: 50%
+			transform: translateY(-50%)
+			width: 15px
+			height: 2px
+			background: $red
+			opacity: 0
+			transition: opacity .2s ease
+
+		&.active
+			padding-left: 40px
+			font-weight: 700
+
+			&:before
+				opacity: 1

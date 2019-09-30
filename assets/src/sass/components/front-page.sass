@@ -1,0 +1,13 @@
+.front-page
+	padding: 20px 0
+	+breakpoint-max(767)
+		padding: 20px 0
+
+	& + .loading
+		position: fixed
+		width: 100%
+		height: 100%
+
+		&:before
+			background-color: $white
+			opacity: 1

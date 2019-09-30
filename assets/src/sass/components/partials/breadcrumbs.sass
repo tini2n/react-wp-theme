@@ -1,0 +1,20 @@
+.breadcrumbs
+	margin-bottom: 15px
+	line-height: 1
+	+breakpoint-max(767)
+		margin-bottom: 10px
+
+	a, span
+		font-size: 11px
+		text-transform: uppercase
+
+	a
+		color: $gray
+
+		&:after
+			content: '/'
+			margin: 0 10px
+
+	span
+		color: $black
+		font-weight: 700

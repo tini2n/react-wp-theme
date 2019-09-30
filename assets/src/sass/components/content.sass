@@ -1,0 +1,325 @@
+$default-margin: 20px
+
+$content-h1-fz: 50px
+$content-h1-lh: 60px
+$content-h2-fz: 24px
+$content-h2-lh: 34px
+$content-h3-fz: 18px
+$content-h3-lh: 28px
+$content-h4-fz: 18px
+$content-h4-lh: 24px
+$content-h5-fz: 14px
+$content-h5-lh: 20px
+$content-h6-fz: 11px
+$content-h6-lh: 17px
+
+%h1    
+    font-family: $font-ibm
+    font-size: $content-h1-fz
+    line-height: $content-h1-lh
+    color: $black
+    font-weight: 700
+    margin-bottom: $default-margin
+    letter-spacing: -.1px
+    +breakpoint-max(767)
+        font-size: 30px
+        line-height: 42px
+
+%h2
+    font-family: $font-ibm
+    font-size: $content-h2-fz
+    line-height: $content-h2-lh
+    color: $black
+    font-weight: 700
+    margin-bottom: $default-margin
+
+%h3
+    font-family: $font-sans
+    font-size: $content-h3-fz
+    line-height: $content-h3-lh
+    font-weight: 700 
+    margin-bottom: $default-margin
+    text-transform: uppercase
+
+%h4
+    font-family: $font-content-serif
+    font-size: $content-h4-fz
+    line-height: $content-h4-lh
+    color: $black
+    font-weight: 700
+    margin-bottom: $default-margin
+    letter-spacing: 1px
+    text-transform: uppercase
+
+%h5       
+    font-size: $content-h5-fz
+    line-height: $content-h5-lh
+    font-weight: 700
+    margin-bottom: $default-margin
+    letter-spacing: 1px
+    text-transform: uppercase
+
+%h6        
+    font-size: $content-h6-fz
+    line-height: $content-h6-lh
+    font-weight: 700
+    margin-bottom: $default-margin
+    letter-spacing: 1px
+    text-transform: uppercase
+
+%link
+    text-decoration: underline
+    +hover
+        text-decoration: none
+
+%dl
+    color: $black
+    font-size: 14px
+    line-height: 22px
+    font-style: normal
+    opacity: 0.3
+    font-weight: 400
+    text-transform: uppercase
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 30px
+    +breakpoint-max(767)
+        font-size: 10px
+        line-height: 15px
+        margin-bottom: 5px
+    dt
+        margin-right: 4px
+        +breakpoint-max(767)
+            margin-bottom: 7px
+    dd
+        font-weight: 700
+        +breakpoint-max(767)
+            margin-bottom: 7px
+    dd:not(:last-child)
+        margin-right: 20px
+
+h1   
+    @extend %h1
+h2   
+    @extend %h2
+
+    
+.content,
+#content,
+%content
+    padding: 40px 0
+    word-break: break-word 
+    word-wrap: break-word
+    text-align: left
+    color: $text-clr
+    font-family: $font-ibm
+    font-size: $default-font-size
+    line-height: $default-line-height
+    backface-visibility: hidden
+    +breakpoint-max(767)
+        padding: 20px 0
+        font-size: $mobile-font-size
+        line-height: $mobile-line-height
+    h3   
+        @extend %h3
+    h4   
+        @extend %h4
+    h5   
+        @extend %h5
+    h6   
+        @extend %h6 
+
+    hr
+        display: block
+        height: 1px
+        background: $text-clr
+        border: none
+        outline: none
+        margin: $default-margin 0
+        padding: 0
+
+    p
+        margin-bottom: $default-margin
+        +breakpoint-max(767)
+            margin-bottom: 15px
+    a:not(.button)
+        @extend %link
+
+    .button
+        margin-bottom: $default-margin
+
+    .excerpt
+        @extend %h4
+
+    .gallery-class
+        margin: 40px 0
+        +breakpoint-max(767)
+            margin: 20px 0
+
+        .slick-dots
+
+            li
+                padding-left: 0
+
+                &:before
+                    display: none
+
+
+    ul
+        padding: 0
+        margin: 0
+        margin-bottom: $default-margin
+
+        li
+            padding-left: 0
+            text-indent: 30px
+
+            &:not(:last-child)
+                margin-bottom: 10px
+
+            &:before
+                content: ''
+                position: relative
+                left: -20px
+                top: -2px
+                display: inline-block
+                width: 8px
+                height: 8px
+                border-radius: 50%
+                background: $semi-light-gray !important
+                opacity: 1 !important
+                transform: rotate(-45deg)
+
+    ol
+        padding: 0
+        margin: 0
+        margin-bottom: $default-margin
+        list-style-type: none
+        li
+            position: relative
+            padding-left: 20px
+            counter-increment: step-counter
+            &:before
+                content: counter(step-counter)'.'
+                display: block
+                color: $red
+                position: absolute
+                left: 0
+
+    .video-container
+        clear: both
+
+    i, 
+    em
+        font-style: italic
+    strong, 
+    b
+        font-weight: 700
+    sup, sub
+        font-size: 75%
+        line-height: 0
+        position: relative
+        vertical-align: baseline
+    sup
+        top: -0.5em
+
+    sub
+        bottom: -0.25em
+
+    .image-slider
+        margin-bottom: 40px
+
+    .gallery-class
+        overflow: hidden
+
+    blockquote
+        position: relative
+        margin: 30px 0
+        padding: 30px 0 30px 130 / 800 * 100%
+        border:
+            top: 2px solid $light-gray
+            bottom: 2px solid $light-gray
+        overflow: hidden
+        +breakpoint-max(767)
+            padding-top: 20px
+            padding-bottom: 20px
+
+        &:before
+            content: ''
+            position: absolute
+            top: 40px
+            left: 40px
+            width: 48px
+            height: 40px
+            background:
+                image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQ4IDQwIj48ZGVmcz4gICAgPHN0eWxlPiAgICAgIC5jbHMtMSB7ICAgICAgICBmaWxsOiAjZTEzMDMxOyAgICAgICAgZmlsbC1ydWxlOiBldmVub2RkOyAgICAgIH0gICAgPC9zdHlsZT4gIDwvZGVmcz4gIDxwYXRoIGlkPSJxdW90ZV9sYWJsZSIgY2xhc3M9ImNscy0xIiBkPSJNMzk2LjcwNSw3MTYuNzkzTDQwOCw3MDAuMTYsNDAzLjcxMiw2OTcsMzg1LjEsNzEyLjkxNmMtMS45ODcsMS42MzMtMi42MTQsMy4xNjMtMi42MTQsNC4wODJzMC42MjcsMi4yNDUsMi42MTQsMy45OEw0MDMuNzEyLDczNyw0MDgsNzMzLjgzNlptLTIyLjQ4MiwwLDExLjE4OS0xNi42MzNMMzgxLjIyOSw2OTdsLTE4LjcxOCwxNS45MmMtMS44ODIsMS42MzMtMi41MSwzLjE2My0yLjUxLDQuMDgyczAuNjI4LDIuMjQ1LDIuNTEsMy45OEwzODEuMjI5LDczN2w0LjE4My0zLjE2NFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNjAgLTY5NykiLz48L3N2Zz4=)
+                size: 100%
+                repeat: no-repeat
+            +breakpoint-max(767)
+                width: 30px
+                height: 25px
+                top: 30px
+                left: 0
+
+        p
+            margin: 0
+            font:
+                family: $font-ibm
+                size: 24px
+            line-height: 32px
+
+        small
+            display: block
+            margin-top: 15px
+            font:
+                family: $font-sans
+                size: 12px
+                weight: 700
+            line-height: 32px
+            letter-spacing: 1px
+            text-transform: uppercase
+
+    table
+        width: 100%
+        margin-bottom: $default-margin
+    th
+        font-weight: 700
+    td, th
+        padding: 5px 10px
+        border: 1px solid $black
+
+    .hidden
+        +breakpoint-max(767)
+            display: none
+    img
+        max-width: 100%
+        height: auto
+    dl
+        @extend %dl
+        text-align: left
+        justify-content: flex-start
+    pre
+        white-space: normal
+
+    .alignnone
+        margin: $default-margin * 1.5 0
+
+    .aligncenter
+        display: block
+        margin: $default-margin * 1.5 auto
+        clear: both
+
+    .alignright
+        float: right
+        clear: right
+        margin: $default-margin * 1.5 0 $default-margin * 1.5 $default-margin * 1.5
+
+    .alignleft
+        float: left
+        clear: left
+        margin: $default-margin * 1.5 $default-margin * 1.5 $default-margin * 1.5 0
+            
+    img.alignnone
+        display: inline-block
+        vertical-align: middle

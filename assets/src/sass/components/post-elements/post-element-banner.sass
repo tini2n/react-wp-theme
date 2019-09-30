@@ -1,0 +1,54 @@
+.bnr-post-element
+	width: 430 / 800 * 100%
+	margin-bottom: $default-margin
+	+breakpoint-max(767)
+		width: 100%
+
+	.post-element-banner
+		position: relative
+		margin-bottom: 20px
+		padding: 22px 2px 2px
+		background: $light-gray
+
+		&:before
+			content: 'annonse'
+			position: absolute
+			top: 6px
+			left: 50%
+			transform: translateX(-50%)
+			color: $gray
+			font:
+				family: $font-sans
+				size: 10px
+				weight: 700
+			line-height: 1
+			letter-spacing: 1px
+			text-transform: uppercase
+
+	img
+		width: 100%
+		display: block
+
+	&.align-left,
+	&.alignleft
+		float: left
+		margin:
+			left: -40px
+			right: 10px
+		+breakpoint-max(767)
+			float: none
+			margin: 0
+
+	&.align-right,
+	&.alignright
+		float: right
+		margin:
+			right: -40px
+			left: 10px
+		+breakpoint-max(767)
+			float: none
+			margin: 0
+
+	&.align-center
+		width: 100%
+		clear: both

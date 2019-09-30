@@ -1,0 +1,205 @@
+.video-player
+	padding: 30px 0 50px
+	background: $dark-gray
+	color: $white
+
+	.template-title h1, .title, h2
+		color: $white
+
+	.template-title
+		margin-bottom: 25px
+
+	time, .title
+		display: block
+		width: 100%
+
+	.placeholder-icon
+		filter: grayscale(1)
+		width: auto
+		height: auto
+		transition: opacity .2s ease
+
+	time
+		color: $gray
+		font:
+			family: $font-sans
+			weight: 700
+			size: 11px
+		line-height: 1
+		text-transform: uppercase
+
+	.player
+		margin-right: 23 / 1050 * 100%
+		+breakpoint-max(767)
+			margin-bottom: 20px
+
+		[data-vimeo-initialized]
+			position: relative
+			padding-bottom: 56.25%
+
+			iframe
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+				width: 100%
+				height: 100%
+
+		.text-container
+			padding: 10px
+
+		.title
+			margin: 0 0 15px
+			text-align: left
+			font:
+				family: $font-ibm
+				weight: 700
+				size: 32px
+			line-height: 40px
+			letter-spacing: -.1px
+			text-transform: none
+
+		.excerpt
+			color: $semi-light-gray
+			font:
+				family: $font-ibm
+				size: 18px
+			line-height: 28px
+
+	.video-container
+		position: relative
+		width: 100% !important
+		padding-bottom: 58.2%
+		+breakpoint-max(767)
+			height: auto !important
+
+		div
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+
+	.list-title
+		text-indent: 7px
+		margin: 0 0 15px
+		text-align: left
+		font:
+			family: $font-sans
+			size: 15px
+		line-height: 1
+		letter-spacing: 1px
+		text-transform: uppercase
+		+breakpoint-max(767)
+			text-indent: 0
+
+	.list
+		max-height: 450px
+		overflow: auto
+		backface-visibility: hidden
+		padding-left: 7px
+
+		&.loading
+			position: relative
+			top: auto
+			left: auto
+			transform: none
+
+			&:before
+				background: transparent
+
+			.video-item
+				pointer-events: none
+				opacity: .6
+
+
+		.excerpt
+			display: none
+
+	.video-item
+		margin-bottom: 0
+		padding: 4px 0
+		border-top: 2px solid $semi-dark-gray
+		transition: opacity .2s ease-in-out
+
+		&:last-child
+			border-bottom: 2px solid $semi-dark-gray
+
+		.placeholder-icon
+			width: 62px
+			height: 18px
+
+		&.active
+			pointer-events: none
+
+			.container
+				background: rgba($white, .1)
+
+				&:before
+					border-right-color: rgba($white, .1)
+
+				svg
+					display: none
+
+		.container
+			position: relative
+			display: flex
+			align-items: center
+			padding: 5px 10px
+			background: rgba($white, 0)
+			cursor: pointer
+			+hover
+				background: rgba($white, .1)
+				&:before
+					border-right-color: rgba($white, .1)
+				.placeholder-icon
+					opacity: .8
+				svg:not(.placeholder-icon)
+					display: none
+
+			&:before
+				content: ""
+				position: absolute
+				right: 100%
+				top: 50%
+				height: 0
+				width: 0
+				margin-top: -7px
+				border: solid transparent
+					width: 7px
+					color: rgba($white, 0)
+					right-color: rgba($white, 0)
+				pointer-events: none
+
+		.thumbnail-container
+			position: relative
+			width: 100px
+			height: 70px
+			margin-right: 13px
+			padding-bottom: 0
+
+			svg
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+
+		.excerpt
+			display: none
+
+		.text-container
+			display: flex
+			flex-wrap: wrap
+			width: 100%
+			max-width: 180 / 300 * 100%
+			margin-left: auto
+
+		time
+			margin-bottom: 5px
+
+		.title
+			font:
+				family: $font-ibm
+				weight: 700
+				size: 18px
+			line-height: 24px

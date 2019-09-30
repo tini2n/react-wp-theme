@@ -1,0 +1,24 @@
+.dateline
+	font:
+		size: 11px
+		weight: 700
+	line-height: 1
+	letter-spacing: 1px
+	text-transform: uppercase
+
+	time
+		line-height: 1
+
+	.published,
+	.updated
+		+breakpoint-max(767)
+			display: block
+
+	.published
+		margin-right: 20px
+		+breakpoint-max(767)
+			margin-bottom: 5px
+
+	.updated
+		color: $gray
+		font-weight: 400

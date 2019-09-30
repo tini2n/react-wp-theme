@@ -1,0 +1,297 @@
+.article-navigation
+	width: 380px
+	z-index: 1
+	transition: box-shadow .2s ease
+	+breakpoint-max(767)
+		width: auto
+
+	&:before
+		content: ''
+		background-color: rgba($white, 0)
+		transition: background-color .2s ease
+
+	&.opened
+		box-shadow: 0 25px 30px 0 rgba($black, .1)
+
+		.controls
+			width: 190px
+			+breakpoint-max(1339)
+				width: 140px
+
+		.category-toggler
+			width: 190px
+
+		.open-close
+			left: 70px
+
+		.previous
+			width: 70px
+
+			&:before
+				background-position: -50px
+
+			svg
+				margin-right: -10px
+				+breakpoint-max(1339)
+					margin-right: 10px
+
+		.container
+			position: relative
+
+		.container,
+		.category-toggler
+			pointer-events: auto
+			opacity: 1
+
+		.heading
+			background: rgba($light-gray, 1)
+
+	&.loading
+		pointer-events: auto
+		top: 30px
+		right: 30px
+		left: auto
+		transform: none
+		+breakpoint-max(767)
+			top: 20px
+			right: 20px
+
+		&:before
+			background-color: rgba($white, .9)
+
+		.heading,
+		.container
+			pointer-events: none
+
+		&:not(.opened)
+
+			&:before
+				width: calc(100% - 140px)
+				height: calc(100% - 2px)
+				right: 0
+				left: auto
+				+breakpoint-max(1339)
+					width: calc(100% - 240px)
+				+breakpoint-max(767)
+					width: 100%
+
+			&:after
+				top: calc(50% - 1px)
+				left: calc(50% + 70px)
+				+breakpoint-max(1339)
+					left: calc(50% + 120px)
+				+breakpoint-max(767)
+					left: auto
+					right: 46px
+
+
+	.loader
+		position: absolute
+		pointer-events: none
+		opacity: 0
+		transition: opacity .2s ease
+
+	.category-toggler
+		position: absolute
+		top: 0
+		left: 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 140px
+		padding: 17px 20px
+		opacity: 0
+		pointer-events: none
+		cursor: pointer
+		+hover
+
+			.toggler span
+				box-shadow: 0px 0px 1px 1px rgba($black, .1) inset
+
+		small, span
+			display: block
+			text:
+				align: left
+				transform: uppercase
+			line-height: 1
+
+		small
+			color: $gray
+			font:
+				size: 11px
+				weight: 700
+			letter-spacing: 1px
+
+		span
+			color: $dark-gray
+			font:
+				size: 13px
+				weight: 700
+			line-height: 16px
+
+	.heading
+		position: relative
+		display: flex
+		align-items: center
+		background: rgba($light-gray, 0)
+		text-align: center
+		transition: background .2s ease
+
+	.controls
+		position: relative
+		display: flex
+		justify-content: space-between
+		width: 240px
+		margin-left: auto
+		padding-bottom: 2px
+		z-index: 1
+		+breakpoint-max(1339)
+			width: 140px
+
+	.open-close
+		position: absolute
+		top: calc(50% - 1px)
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+		width: 40px
+		height: 40px
+		border: 2px solid $semi-light-gray
+		border-radius: 50%
+		color: $dark-gray
+		background: $white
+		cursor: pointer
+		z-index: 1
+
+		svg
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%) translateY(-50%)
+			pointer-events: none
+			width: 13px
+			height: 13px
+
+	.previous,
+	.next
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 119px
+		height: 60px
+		padding-right: 20px
+		font-size: 11px
+		font-weight: 700
+		line-height: 1
+		text-transform: uppercase
+		letter-spacing: .5px
+		cursor: pointer
+		+breakpoint-max(1339)
+			width: 70px
+
+		span
+			+breakpoint-max(1339)
+				display: none
+
+		&.inactive
+			opacity: .5
+			pointer-events: none
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTkiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMTkgNjAiPiAgPG1ldGFkYXRhPjw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+PHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPiAgIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+ICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIvPiAgIDwvcmRmOlJERj48L3g6eG1wbWV0YT4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/eHBhY2tldCBlbmQ9InciPz48L21ldGFkYXRhPjxkZWZzPiAgICA8c3R5bGU+ICAgICAgLmNscy0xIHsgICAgICAgIGZpbGw6ICNmZmY7ICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7ICAgICAgICBvcGFjaXR5OiAwLjg7ICAgICAgfSAgICA8L3N0eWxlPiAgPC9kZWZzPiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMCwwSDExOVY2MEgwVjBaTTEyMCw4QTIyLDIyLDAsMSwxLDk4LDMwLDIyLDIyLDAsMCwxLDEyMCw4WiIvPjwvc3ZnPg==)
+			background-repeat: no-repeat
+			z-index: -1
+
+		svg
+			margin-right: 10px
+			transform: rotate(90deg)
+
+	.next
+		padding:
+			left: 30px
+			right: 0
+
+		&:before
+			transform: scaleX(-1)
+
+		svg
+			margin-left: 10px
+			transform: rotate(-90deg)
+
+	.container
+		position: absolute
+		padding: 25px
+		background: $white
+		opacity: 0
+		pointer-events: none
+		transition: opacity .2s ease
+
+	nav
+		max-height: 520px
+		overflow: auto
+		margin-bottom: 20px
+
+		a,
+		span
+			position: relative
+			display: block
+			padding-left: 25px
+			padding-bottom: 15px
+			font:
+				family: $font-ibm
+				size: 16px
+			line-height: 20px
+			letter-spacing: -.1px
+
+			&.active
+				font-weight: 700
+				pointer-events: none
+
+				&:before
+					background: $red
+
+				time
+					color: $red
+
+			&:last-child
+
+				&:after
+					content: none
+
+			&:before,
+			&:after
+				content: ''
+				position: absolute
+
+			&:before
+				top: 6px
+				left: 0
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				background: $semi-light-gray
+				transition: background .2s ease
+
+			&:after
+				content: ''
+				top: 16px
+				left: 3px
+				height: calc(100% - 13px)
+				border-right: 2px dotted $semi-light-gray
+
+		time
+			display: block
+			color: $gray
+			font:
+				family: $font-sans
+				weight: 700
+				size: 13px
+			line-height: 20px
+			letter-spacing: 1px
+			transition: color .2s ease

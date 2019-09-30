@@ -1,0 +1,167 @@
+.push-menu
+	min-width: 90px
+
+	&.open
+
+		.overlay
+			pointer-events: auto
+
+		.menu
+			transform: translateX(-50vw)
+			opacity: 1
+			+breakpoint-max(1440)
+				transform: translateX(0)
+				margin-right: 0
+
+	button
+		padding: 11px 0 12px 20px
+		color: $white
+		text-transform: uppercase
+		font:
+			size: 14px
+			weight: 700
+		cursor: pointer
+		transition: opacity .2s ease
+		+hover
+			opacity: .8
+
+		svg
+			margin-left: 12px
+
+	.menu
+		position: fixed
+		top: 0
+		right: 0
+		width: 440px
+		margin-right: -720px
+		padding: 20px
+		height: 100%
+		background: $dark-gray
+		transform: translateX(0vw)
+		transition: transform .2s ease, opacity .2s ease
+		opacity: 0
+		z-index: 100
+		+breakpoint-max(1440)
+			margin-right: 0
+			transform: translateX(100%)
+		+breakpoint-max(767)
+			width: 100%
+			min-width: 320px
+			overflow: auto
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			display: block
+			width: 3000px
+			height: 100%
+			transform: translateX(100%)
+			background: $dark-gray
+			+breakpoint-max(767)
+				content: none
+
+
+	.overlay
+		position: absolute
+		top: 0
+		left: 0
+		transform: translateX(-100%)
+		height: 100%
+		width: calc(100vw - 410px)
+		pointer-events: none
+
+	.heading
+		display: flex
+		margin-bottom: 30px
+		+breakpoint-max(767)
+			justify-content: space-between
+
+	.log-in
+		min-width: 0
+		padding-left: 0
+		border-left: 0
+		border-right: 1px solid rgba($white, .1)
+		+breakpoint-max(767)
+			display: block
+
+		.cta
+			background: $red
+
+	.close
+		padding: 11px 24px
+		margin-left: auto
+		margin-right: 30px
+		line-height: 1
+		+breakpoint-max(767)
+			padding: 0
+			margin-right: 0
+			font-size: 0
+
+		svg
+			position: relative
+			top: 2px
+			width: 13.5px
+			height: 13.5px
+			color: $red
+
+	nav
+		width: 330 / 370 * 100% !important
+		margin: 0 auto
+
+	.links
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		padding: 30px 0
+		margin-bottom: 40px
+		border-bottom: 1px solid rgba($white, .1)
+
+		a
+			position: relative
+			padding-bottom: 4px
+			color: rgba($white, .6)
+			font:
+				weight: 600
+				size: 14px
+			line-height: 1
+			text-transform: uppercase
+			overflow: hidden
+			transition: color .2s ease
+
+			+hover
+				color: rgba($white, 1)
+
+				&:before
+					transform: translateX(0%)
+
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 2px
+				background: $red
+				transform: translateX(-100%)
+				transition: transform .2s ease
+
+			&:not(:last-of-type)
+				margin-bottom: 20px
+
+	h5
+		margin: 10px 0 26px 20px
+		font:
+			weight: 700
+			size: 14px
+		line-height: 1
+
+	.categories
+		@extend .tags
+
+		a
+			border-color: rgba($white, .1) !important
+			+hover
+				border-color: $red !important
+				background: transparent !important

@@ -1,0 +1,43 @@
+.subscription
+	padding: 40px 0
+	+breakpoint-max(767)
+		padding: 20px 0
+
+	& + .loading
+		display: none
+
+	.page-heading
+		margin-bottom: 30px
+
+	.subtitle
+		position: relative
+		font:
+			family: $font-sans
+			weight: 700
+			size: 34px
+		letter-spacing: -.2px
+		line-height: 1
+		+breakpoint-max(767)
+			display: flex
+			flex-direction: column
+			align-items: end
+
+		a
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+			padding-bottom: 5px
+			border-bottom: 2px solid $medium-light-gray
+			color: $gray
+			font:
+				size: 12px
+				weight: 400
+			letter-spacing: .5px
+			text-transform: uppercase
+			+hover
+				border-bottom: 2px solid transparent
+			+breakpoint-max(767)
+				position: static
+				transform: none
+				margin-top: 20px

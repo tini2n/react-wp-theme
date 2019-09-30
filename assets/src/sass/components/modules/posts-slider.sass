@@ -1,0 +1,96 @@
+@import "../../helpers/slick/slick.scss"
+@import "../../helpers/slick/slick-theme.scss"
+
+.posts-slider
+	position: relative
+	margin-bottom: 40px
+	+clearfix
+
+	.category-label
+		margin: 10px 0
+
+		&:before
+			display: none
+
+	.title
+		margin-bottom: 10px
+		font:
+			family: $font-ibm
+			size: 20px
+			weight: 700
+		line-height: 24px
+
+	.excerpt
+		font:
+			family: $font-ibm
+			size: 16px
+		line-height: 22px
+		letter-spacing: -.1px
+
+	.slick-list
+		cursor: grab
+
+		&:active
+			cursor: grabbing
+
+	.slick-slider
+		position: static
+		margin-bottom: 30px
+		+breakpoint-max(767)
+			margin-bottom: 15px
+
+	.slick-slide
+		padding: 0 40px 0 10px
+
+	.slider-nav
+		position: absolute
+		bottom: 0
+		left: 0
+		display: flex !important
+		width: 670 / 1020 * 100%
+		align-items: center
+		height: 40px
+		padding: 0 10px
+		+breakpoint-max(767)
+			position: relative
+
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+			width: 590 / 670 * 100%
+			border-bottom: 2px dotted rgba($semi-light-gray, .5)
+			+breakpoint-max(767)
+				display: none
+
+		li
+			display: block
+			margin-right: 12px
+			+breakpoint-max(767)
+				margin-right: 8px
+
+			&:last-child
+				margin-right: 0
+
+			&.slick-active
+
+				button
+					background: $red
+
+		button
+			display: block
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background: $semi-light-gray
+			font-size: 0
+			cursor: pointer
+			transition: background .2s ease
+
+	.button
+		float: right
+		width: 320 / 1020 * 100%
+		+breakpoint-max(767)
+			width: 100%

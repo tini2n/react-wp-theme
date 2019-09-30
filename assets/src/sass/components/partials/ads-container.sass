@@ -1,0 +1,38 @@
+.ads-container
+
+	.ad-desktop,
+	.ad-mobile
+		position: relative
+		border: 20px solid $light-gray
+
+		&:before
+			content: 'annonse'
+			position: absolute
+			top: -15px
+			left: 50%
+			transform: translateX(-50%)
+			color: $gray
+			font-size: 10px
+			font-weight: 700
+			line-height: 1
+			letter-spacing: 1px
+			text-transform: uppercase
+
+	.ad-mobile
+		margin-bottom: 25px
+		+breakpoint-min(768)
+			display: none
+
+	.ad-desktop
+		margin-bottom: 30px
+		+breakpoint-max(1310)
+			display: none
+
+	img
+		width: 100%
+
+	a, img
+		display: block
+
+	svg
+		display: none

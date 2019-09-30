@@ -1,0 +1,43 @@
+.last-tips
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+	width: 100vw
+	padding: 40px 0 50px
+	margin-bottom: 40px
+	background: $light-gray
+	+breakpoint-max(767)
+		padding: 20px 0
+
+	.excerpt
+		max-height: 70px
+		overflow: hidden
+
+	.button
+		font-family: $font-sans
+		background: $red
+		color: $white
+
+	.slider-nav
+		width: 100%
+		bottom: -50px
+		+breakpoint-max(767)
+			bottom: 0
+
+	.slick-slider
+		//margin-bottom: 0
+
+	.slick-list
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+		width: calc(100% + 30px)
+
+	.slick-slide
+		padding: 0 15px
+
+		&:nth-child(1)
+			padding-left: 15px
+
+	.posts-slider
+		margin-bottom: 0

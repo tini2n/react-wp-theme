@@ -1,0 +1,43 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.metabox.io/33c17f3f0a8f6ebbdd359f1901ba46d5"
+    },
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "shtrihstr/simple-rest-api": "dev-master",
+    "wpmetabox/meta-box": "4.*",
+    "meta-box/mb-settings-page": "dev-master",
+    "meta-box/meta-box-group": "dev-master",
+    "meta-box/mb-admin-columns": "dev-master",
+    "meta-box/meta-box-include-exclude": "dev-master",
+    "meta-box/mb-term-meta": "dev-master",
+    "meta-box/meta-box-conditional-logic": "dev-master",
+    "google/apiclient": "^2.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "vendor/meta-box/{$name}/": [
+        "vendor:meta-box"
+      ],
+      "vendor/meta-box/mb-custom-post-type/": [
+        "wpackagist-plugin/mb-custom-post-type"
+      ]
+    }
+  },
+  "autoload": {
+    "files": [
+      "vendor/meta-box/mb-settings-page/mb-settings-page.php",
+      "vendor/meta-box/meta-box-group/meta-box-group.php",
+      "vendor/meta-box/mb-admin-columns/mb-admin-columns.php",
+      "vendor/meta-box/meta-box-include-exclude/meta-box-include-exclude.php",
+      "vendor/meta-box/mb-term-meta/mb-term-meta.php",
+      "vendor/meta-box/meta-box-conditional-logic/meta-box-conditional-logic.php"
+    ]
+  }
+}

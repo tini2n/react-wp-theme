@@ -1,0 +1,43 @@
+.notes-list
+	margin-bottom: 20px
+
+	.section-title
+		padding-bottom: 20px
+		margin-bottom: 15px
+		font-size: 28px
+		line-height: 24px
+		letter-spacing: -.1px
+		text-transform: none
+
+	.list
+		position: relative
+		max-height: 1375px
+		padding-left: 30px
+		padding-top: 10px
+		overflow: auto
+		+breakpoint-max(767)
+			max-height: none
+
+	.note-item
+		position: relative
+		padding: 15px 15px 15px 0
+		border-top: 2px solid $light-gray
+
+		&:before
+			content: ''
+			position: absolute
+			top: -4px
+			left: -26px
+			transform: translateX(-50%)
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background: $semi-light-gray
+
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: -27px
+			height: 100%
+			border-left: 2px dotted $semi-light-gray

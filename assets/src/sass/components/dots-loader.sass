@@ -1,0 +1,34 @@
+@keyframes dots-loading
+	0%
+		transform: scale(1)
+		opacity: .5
+	50%
+		transform: scale(1.2)
+		opacity: 1
+	100%
+		transform: scale(1)
+		opacity: .5
+
+.dots-loader
+
+	span
+		display: inline-block
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		background: $red
+		opacity: .5
+		animation: dots-loading .6s infinite ease-in-out
+
+		&:not(:last-child)
+			margin-right: 10px
+
+		&:nth-child(1)
+			animation-delay: 0s
+
+		&:nth-child(2)
+			animation-delay: 0.1s
+
+		&:nth-child(3)
+			animation-delay: 0.2s
+

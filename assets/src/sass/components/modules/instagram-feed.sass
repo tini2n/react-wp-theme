@@ -1,0 +1,26 @@
+.instagram-feed
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+	width: 100vw
+	padding: 40px 0 50px
+	margin-bottom: 40px
+	+breakpoint-max(767)
+		padding: 0 20px
+
+	.wrapper
+		+breakpoint-max(767)
+			padding: 0
+
+	.slick
+
+		&-slide
+			padding: 0 12px
+			+breakpoint-max(767)
+				padding: 0
+
+			&:nth-child(5n+1)
+				padding-left: 0
+
+			&:nth-child(5n)
+				padding-right: 0

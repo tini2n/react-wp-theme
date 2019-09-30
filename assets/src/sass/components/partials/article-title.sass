@@ -1,0 +1,61 @@
+.article-title
+	position: relative
+
+	h1
+		text-align: left
+		font:
+			family: $font-ibm
+			size: 50px
+			weight: 700
+		line-height: 65px
+		letter-spacing: -.1px
+		text-transform: none
+		+breakpoint-max(767)
+			font-size: 30px
+			line-height: 42px
+
+	.plus-label
+		display: flex
+		position: absolute
+		top: 5px
+		left: 20px
+		+breakpoint-max(1199)
+			position: relative
+			top: 0
+			left: -10px
+			margin-bottom: 20px
+
+		.icon
+			padding: 0 10px 0 12px
+			border-radius: 15px 0 0 15px
+			background: rgba($white, .6)
+
+			svg
+				position: relative
+				top: 3px
+
+		span
+			padding: 8.5px 12px 8.5px 10px
+			border-radius: 0 15px 15px 0
+			background: $medium-light-gray
+			font:
+				size: 13px
+				weight: 800
+			line-height: 1
+			letter-spacing: 1px
+			text-transform: uppercase
+
+	.subtitle-label
+		position: relative
+		left: -10px
+		display: inline-block
+		padding: 0 10px
+		background: $red
+		color: $white
+		font:
+			family: $font-ibm
+			size: 24px
+		line-height: 40px
+		+breakpoint-max(767)
+			font-size: 18px
+			line-height: 28px

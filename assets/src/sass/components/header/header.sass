@@ -1,0 +1,28 @@
+#header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	padding: 8px 0
+	background: $red
+	box-shadow: 0 5px 10px 0 rgba($black, .1)
+	color: $white
+	z-index: 10000
+
+	.wrapper-outer
+		display: flex
+		align-items: center
+		+breakpoint-max(1023)
+			padding: 0 20px
+
+	.logo
+		margin-right: 105 / 1350 * 100%
+
+	.log-in
+		flex-shrink: 0
+
+	.top-menu
+		margin:
+			right: auto
+		+breakpoint-max(1079)
+			display: none

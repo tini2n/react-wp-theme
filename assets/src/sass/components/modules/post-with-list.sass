@@ -1,0 +1,73 @@
+.post-with-list
+	border-bottom: 2px dotted rgba($semi-light-gray, .5)
+	margin-bottom: 30px
+
+	.grid-3-6
+
+		.post-item
+			padding: 0
+
+		.text-container
+			width: 100%
+
+	.posts-list
+		float: left
+		width: 495 / 1050 * 100%
+		margin-right: 30 / 1050 * 100%
+		+breakpoint-max(767)
+			width: 100%
+
+		.category-label
+			background: transparent
+			padding: 0
+
+			&:before
+				left: -10px
+
+		.post-item
+			align-items: normal
+			padding: 10px 10px 10px 0
+
+			& > a
+				order: 1
+
+			&.black,
+			&.red,
+			&.gray
+				padding: 10px
+
+				.text-container
+					background: transparent
+
+		.list-item
+			border-top: 0
+
+			&:last-child
+				border-bottom: 0
+
+				.post-item
+					border-bottom: 0
+
+		.subtitle,
+		.title
+			display: block
+
+		.plus-label
+			margin: 0 15px
+			padding: 2.5px 7px
+
+		.thumbnail-container
+			display: none
+			height: 60px
+
+		.text-container
+			position: relative
+			order: 0
+			padding:
+				top: 0
+				bottom: 0
+				right: 20px
+				left: 10px
+
+	.text-container
+		width: 580 / 670 * 100%

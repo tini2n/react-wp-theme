@@ -1,0 +1,113 @@
+.article
+	position: relative
+	padding: 25px 0 0
+	+breakpoint-max(767)
+		padding-top: 20px
+
+	.paywall
+		margin: 40px 0 80px
+
+	&:not(.vertical),
+	&:not(.special)
+		+breakpoint-max(767)
+			padding-top: 90px
+
+	.wrapper-outer
+		position: relative
+		max-width: 1440px
+		+clearfix
+
+		.content-wrapper
+			width: 100%
+			max-width: 800px
+			margin: 0 auto
+
+	.ads-container
+		position: absolute
+		+breakpoint-max(1310)
+			display: none
+
+		&:nth-child(1)
+			left: 60px
+
+		&:nth-child(2)
+			right: 60px
+
+		.ad-desktop
+			width: 180px
+
+		.ad-desktop,
+		.ad-mobile
+			border:
+				bottom: 0
+				left: 0
+				right: 0
+
+	& > .wrapper-thin
+		+breakpoint-max(767)
+			padding: 0 20px
+
+	&.vertical,
+	&.special
+		padding: 0
+
+	&.vertical
+
+		.paywall
+			margin: 20px 0 80px
+
+		.plus-label
+
+			.icon
+				border:
+					top: 1px solid $medium-light-gray
+					left: 1px solid $medium-light-gray
+					bottom: 1px solid $medium-light-gray
+
+			span
+				background-color: $medium-light-gray
+
+		& > .wrapper-thin
+			position: relative
+			top: 12px
+			+breakpoint-max(767)
+				top: auto
+
+		.caption-container
+			display: flex
+			justify-content: flex-end
+			max-width: 1180px
+			margin: 0 auto
+			padding-top: 20px
+			+breakpoint-max(767)
+				display: none
+
+			p
+				width: 720 / 1180 * 100%
+				padding: 0 80px
+				color: $gray
+				font:
+					family: $font-sans
+					size: 14px
+				line-height: 18px
+
+		.image-slider
+			margin-bottom: 40px
+
+		.wrapper-outer
+			padding-top: 50px
+			+breakpoint-max(767)
+				padding-top: 30px
+
+
+
+		.wrapper-thin
+			position: relative
+
+	&.special
+
+		.paywall
+			margin: 0 0 80px
+
+		.article-lead
+			margin-bottom: 40px

@@ -1,0 +1,108 @@
+.post-element-related
+	position: relative
+	display: flex
+	align-items: center
+	width: 100%
+	margin: 30px 0
+	padding: 30px 30px 50px
+	border:
+		top: 4px solid $red
+		left: 2px solid $light-gray
+		right: 2px solid $light-gray
+		bottom: 2px solid $light-gray
+	+breakpoint-max(767)
+		flex-wrap: wrap
+		padding: 20px 20px 50px
+
+	.thumbnail-container
+		width: 100%
+		max-width: 260 / 736 * 100%
+		+breakpoint-max(767)
+			max-width: none
+			margin-bottom: 20px
+
+	.text-container
+		width: 100%
+		padding: 0 30px
+		+breakpoint-max(767)
+			padding: 0
+			text-align: left
+
+	.category-label
+		display: block
+		margin-bottom: 15px
+		color: $red
+		font:
+			family: $font-sans
+			size: 13px
+			weight: 700
+		letter-spacing: 1px
+		line-height: 1
+		transition: opacity .2s ease
+		+hover
+			opacity: .8
+
+		&:before
+			display: none
+
+		a
+			text-decoration: none
+
+	.subtitle
+		margin: 0
+		font:
+			family: $font-ibm
+			size: 18px
+			weight: 400
+		line-height: 24px
+		text-transform: none
+
+	.title
+		margin: 0
+		font:
+			family: $font-ibm
+			size: 24px
+			weight: 700
+		line-height: 36px
+		letter-spacing: -.1px
+		text-transform: none
+
+	.title, .subtitle
+
+		+breakpoint-max(767)
+			font-size: 16px
+			line-height: 24px
+
+	.read-more
+		position: absolute
+		right: 30px
+		bottom: 30px
+		color: $dark-gray
+		font:
+			family: $font-sans
+			size: 11px
+			weight: 700
+		line-height: 1
+		letter-spacing: 1px
+		text-decoration: none !important
+		text-transform: uppercase
+		transition: opacity .2s ease
+		+hover
+			opacity: .8
+
+			&:after
+				transform: rotate(-45deg) translateX(3px) translateY(3px)
+
+		+breakpoint-max(767)
+			right: 22px
+			bottom: 20px
+
+		&:after
+			content: ''
+			display: inline-block
+			margin-left: 15px
+			padding: 3px
+			border: solid $dark-gray
+			border-width: 0 2px 2px 0
+			transition: transform .2s ease
+			transform: rotate(-45deg)

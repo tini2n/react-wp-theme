@@ -1,0 +1,110 @@
+.article-hero
+	max-width: $wrapper-outer
+	padding: 0 $wrapper-outer-padding
+	margin: 0 auto
+	+breakpoint-max(960)
+		padding: 0
+	+breakpoint-max(767)
+		padding: 0 20px
+
+	.wrapper
+		max-width: 800px
+		padding: 0
+
+		&-thin
+			+breakpoint-max(767)
+				padding: 0
+
+	.article-navigation
+		position: absolute
+		top: 30px
+		right: 30px
+		+breakpoint-max(767)
+			top: 20px
+			left: 20px
+			right: 20px
+
+		&.loading
+			transform: none
+			left: auto
+
+	.to-content
+		position: absolute
+		top: 230px
+		right: 130px
+		border: 2px solid rgba($semi-gray, .2)
+		background: transparent
+		transition: border-color .2s ease
+		+hover
+			border-color: rgba($semi-gray, 1)
+		+breakpoint-max(767)
+			display: none
+
+	.caption
+		margin: 10px 0
+		color: $gray
+		font:
+			family: $font-sans
+			size: 14px
+		line-height: 18px
+
+	.article-lead
+		margin-bottom: 30px
+		+breakpoint-max(767)
+			margin-bottom: 20px
+
+	.video-container
+		margin-bottom: 0
+
+	.article-title
+
+		.wrapper
+			+breakpoint-max(860)
+				max-width: 100%
+				padding: 0 30px
+				margin-bottom: 0
+			+breakpoint-max(767)
+				padding: 0
+
+		.plus-label
+			top: 2px
+			left: 0
+			background: transparent
+			padding: 0
+			+breakpoint-max(1269)
+				position: relative
+				top: auto
+				left: -10px
+				padding: 0
+				margin-bottom: 10px
+
+			&:before
+				content: ''
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%) translateX(100%)
+				display: block
+				width: 85px
+				border-bottom: 2px dotted $semi-light-gray
+				+breakpoint-max(1450)
+					display: none
+
+			span
+				color: $black
+
+			.icon
+				border: 2px solid $light-gray
+				height: 30px
+
+				svg
+					top: 4px
+
+		.subtitle-label
+			left: auto
+			display: block
+			margin: 0 0 10px
+			padding: 0
+			background: transparent
+			color: $black
+			line-height: 32px

@@ -1,0 +1,102 @@
+.footer-misc-row
+	display: flex
+	padding: 30px 10px 45px
+	+breakpoint-max(767)
+		flex-wrap: wrap
+		padding: 20px 0
+
+	.office-info
+		width: 220 / 1320 * 100% !important
+		margin-right: 70 / 1320 * 100% !important
+		+breakpoint-max(767)
+			width: 100% !important
+			margin-right: 0 !important
+
+	.contacts
+		margin-right: 50 / 1320 * 100% !important
+		+breakpoint-max(767)
+			max-width: 340px
+			margin: 0 auto !important
+
+	.col
+		width: 320 / 1320 * 100%
+		margin-right: 20 / 1320 * 100%
+		+breakpoint-max(767)
+			width: 100%
+			margin-right: 0
+			text-align: center
+
+		&:last-child
+			margin-right: 0
+
+	.menu
+		display: flex
+		flex-wrap: wrap
+
+		a
+			display: block
+			width: 50%
+			min-width: 50%
+			margin-bottom: 10px
+			font:
+				family: $font-sans
+				size: 14px
+				weight: 700
+			line-height: 24px
+			text-transform: uppercase
+			transition: opacity .2s ease
+			+hover
+				opacity: .8
+
+			&:nth-last-child(1),
+			&:nth-last-child(2)
+				margin-bottom: 0
+
+	.categories
+		padding: 30px 0 20px
+		@extend .tags
+
+		a
+			border-color: rgba($white, .1) !important
+			+hover
+				background: transparent !important
+				border-color: $red !important
+
+	dl
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 20px
+		font-size: 14px
+		line-height: 20px
+
+		a[href^="mailto"]
+			padding-bottom: 1px
+			border-bottom: 1px solid $red
+
+			+hover
+				border-bottom: 1px solid transparent
+
+	dt
+		width: 70 / 300 * 100%
+		color: $gray
+		+breakpoint-max(767)
+			text-align: left
+
+	dd
+		width: 230 / 300 * 100%
+		font-weight: 700
+		+breakpoint-max(767)
+			text-align: right
+
+	p
+		margin-bottom: 15px
+		font:
+			size: 14px
+		line-height: 20px
+
+	h5
+		text-transform: uppercase
+		font:
+			weight: 700
+			size: 12px
+		line-height: 24px

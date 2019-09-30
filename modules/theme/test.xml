@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<order>
+    <externalOrderId>as111</externalOrderId>
+    <orderDate>1551355912</orderDate>
+    <paymentMethod>creditcard</paymentMethod>
+    <orderAmount>1</orderAmount>
+    <currency>NOK</currency>
+    <companyCode>no.tgn</companyCode>
+    <payer>
+        <firstName>Test</firstName>
+        <lastName>Test</lastName>
+        <birthDate>false</birthDate>
+        <emails>
+            <node>jarlax.elance@gmail.com</node>
+        </emails>
+    </payer>
+    <orderLines>
+        <node>
+            <productSpecType>product</productSpecType>
+            <product>TRAV</product>
+            <quantity>1</quantity>
+            <startInfo>
+                <startDate>1551355912</startDate>
+                <startIssue>1551355912</startIssue>
+            </startInfo>
+            <rewardPartnerId>32</rewardPartnerId>
+        </node>
+    </orderLines>
+</order>

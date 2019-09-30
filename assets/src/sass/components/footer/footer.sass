@@ -1,0 +1,54 @@
+#footer
+	color: $white
+
+	.footer-main
+		background: $dark-gray
+
+	.wrapper-outer
+		+breakpoint-max(767)
+			padding: 0 20px
+			text-align: center
+
+
+	.copyright
+		position: relative
+		padding: 20px 0
+		background: $black
+		color: $gray
+		font-size: 14px
+		line-height: 24px
+		box-shadow: 0 5px 0 $black, 0 5px 0 $black, 0 5px 0 $black
+		+clearfix
+
+		a
+			text-decoration: underline
+			+hover
+				text-decoration: none
+
+		span
+			margin: 0 20px
+			+breakpoint-max(767)
+				margin: 0 10px
+
+			&:nth-child(1)
+				margin-left: 10px
+
+		p
+			+breakpoint-max(767)
+				display: block
+				float: none !important
+
+			&:nth-child(1)
+				float: left
+
+			&:nth-child(2)
+				float: right
+
+	.tags
+
+		a
+			border: 2px solid rgba($white, .1)
+
+	.top-row
+		display: flex
+

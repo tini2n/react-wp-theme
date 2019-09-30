@@ -1,0 +1,54 @@
+.checkbox-item
+	position: relative
+	border-top: 1px solid $light-gray
+
+	.is-error &,
+	&.is-error
+
+		span
+			border-color: $red
+
+	a
+		text-decoration: underline
+		+hover
+			text-decoration: none
+
+	label
+		display: block
+		padding: 18px 30px
+		font:
+			size: 14px
+			weight: 700
+		line-height: 1
+		text-transform: uppercase
+		cursor: pointer
+
+	span
+		position: absolute
+		top: 50%
+		right: 30px
+		transform: translateY(-50%)
+		width: 24px
+		height: 24px
+		border: 2px solid $semi-light-gray
+		transition: border-color .2s ease
+
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%) translateY(-50%)
+			width: 14px
+			height: 10px
+			background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDE0IDEwIj4gIDxwYXRoIGlkPSJvay1pY29uIiBmaWxsPSIjZGUzMDJmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGRhdGEtbmFtZT0ib2staWNvbiIgY2xhc3M9ImNscy0xIiBkPSJNMTE5NC42MSwyMDIuMTg3bC03LjYyLDcuNDMxYTEuMzUxLDEuMzUxLDAsMCwxLTEuODcsMEwxMTgxLjM4LDIwNmExLjI0NSwxLjI0NSwwLDAsMSwwLTEuODEsMS4zNTEsMS4zNTEsMCwwLDEsMS44NywwbDIuODEsMi43MTcsNi42Ny02LjUyOGExLjM2NiwxLjM2NiwwLDAsMSwxLjg4LDBBMS4yNjQsMS4yNjQsMCwwLDEsMTE5NC42MSwyMDIuMTg3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExODEgLTIwMCkiLz48L3N2Zz4=)
+			opacity: 0
+			transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1)
+
+	[type="checkbox"]
+		display: none
+
+		&:checked
+
+			& + span:before
+				opacity: 1

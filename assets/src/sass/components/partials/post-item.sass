@@ -1,0 +1,198 @@
+.post-item
+	position: relative
+	display: block
+	margin-bottom: 25px
+
+	&.black,
+	&.red,
+	&.gray
+
+		.text-container
+			padding: 13px 20px
+
+	&.black
+
+		.text-container
+			background: $dark-gray
+			color: $white
+
+	&.red
+
+		.category-label
+			color: rgba($white, .6)
+
+			&:before
+				background: rgba($white, .6)
+
+		.text-container
+			background: $red
+			color: $white
+
+	&.gray
+
+		.text-container
+			background: $semi-light-gray
+
+	a
+		display: block
+		transition: opacity .2s ease
+		+hover
+			opacity: .6
+
+	.thumbnail-container
+		position: relative
+		padding-bottom: 62.5%
+		background: $light-gray
+		overflow: hidden
+		transition: opacity .2s ease
+		+hover
+			opacity: .8
+
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%) translateY(-50%)
+			display: block
+			min-width: 100%
+			min-height: 100%
+			width: auto
+			height: auto
+			max-width: none
+
+	svg
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+
+	.placeholder-icon
+		width: 62px
+		height: 18px
+		opacity: .25
+		pointer-events: none
+
+	.video-icon
+		width: 70px
+		height: 70px
+		z-index: 1
+
+	.plus-label
+		position: absolute
+		top: 10px
+		left: 0
+		padding: 5px 9px 5px 5px
+		border-radius: 0 15px 15px 0
+		color: $white
+		background: $red
+		font:
+			family: $font-sans
+			weight: 800
+			size: 10px
+		line-height: 1
+		letter-spacing: 1px
+		text-transform: uppercase
+		z-index: 1
+
+	.text-container
+		padding: 10px
+
+	.excerpt
+		max-height: 80px
+		overflow: hidden
+		+breakpoint-max(767)
+			max-height: 73px
+
+	.category-label
+		position: relative
+		margin-bottom: 5px
+		color: $gray
+		font:
+			family: $font-sans
+			weight: 700
+			size: 11px
+		line-height: 14px
+		letter-spacing: 1px
+		text-transform: uppercase
+
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: -10px
+			height: 14px
+			width: 4px
+			background: $red
+
+	.grid-4-6 &
+
+		.subtitle, .title, .excerpt
+			font-family: $font-ibm
+
+		.subtitle, .title
+			letter-spacing: -.1px
+
+		.subtitle
+			font-size: 24px
+			line-height: 40px
+			+breakpoint-max(767)
+				font-size: 15px
+				line-height: 24px
+
+		.title
+			margin-bottom: 15px
+			font-weight: 700
+			font-size: 40px
+			line-height: 44px
+			+breakpoint-max(767)
+				font-size: 22px
+				line-height: 30px
+
+		.excerpt
+			font-size: 18px
+			line-height: 28px
+			+breakpoint-max(767)
+				font-size: 15px
+				line-height: 24px
+
+	.grid-3-6 &
+
+		.subtitle, .title, .excerpt
+			font-family: $font-ibm
+
+		.subtitle
+			font-size: 22px
+			line-height: 40px
+
+		.title
+			margin-bottom: 15px
+			font-weight: 700
+			font-size: 32px
+			line-height: 40px
+			+breakpoint-max(767)
+				font-size: 22px
+				line-height: 30px
+
+		.excerpt
+			font-size: 18px
+			line-height: 28px
+			+breakpoint-max(767)
+				font-size: 15px
+				line-height: 24px
+
+
+	.grid-2-6 &
+
+		.subtitle, .title, .excerpt
+			font-family: $font-ibm
+
+		.title
+			font-size: 22px
+			font-weight: 700
+			line-height: 30px
+
+		.excerpt
+			+breakpoint-max(767)
+				font-size: 15px
+				line-height: 24px

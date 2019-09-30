@@ -1,0 +1,130 @@
+.article-footer
+	clear: both
+	margin-bottom: 45px
+
+	.fb-comments
+		width: 100%
+
+		iframe
+			width: 100% !important
+
+	.dateline
+		border-bottom: 2px dotted $semi-light-gray
+		padding: 15px 0
+		text-align: right
+		font-family: $font-sans
+		font-size: 11px
+		line-height: 1
+		text-transform: uppercase
+		+breakpoint-max(767)
+			text-align: left
+
+	.social-likes
+		position: relative
+		top: -6px
+		display: flex
+		align-items: flex-end
+		float: left
+		+breakpoint-max(767)
+			float: none
+			margin-bottom: 10px
+
+	.published,
+	.updated
+		+breakpoint-max(767)
+			display: block
+			margin: 0
+
+	.facebook-like
+		position: relative
+		margin-right: 10px
+
+	.twitter-share
+		position: relative
+		padding: 4px 5px 5px 23px
+		border-radius: 3px
+		background: $twitter
+		color: $white
+		text-transform: none
+		letter-spacing: 0
+		transition: opacity .2s ease
+		+hover
+			opacity: .8
+
+		svg
+			position: absolute
+			top: 4px
+			left: 6px
+			transform: scale(.9)
+
+	.published
+		font-weight: 700
+		margin-right: 20px
+
+	.updated
+		color: $gray
+		+breakpoint-max(767)
+			margin-top: 5px
+
+	.tagline
+		display: flex
+		align-items: end
+		width: 100%
+		padding: 20px 0
+
+	.tags
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		margin:
+			left: 20px
+			top: -5px
+			bottom: -5px
+		padding-left: 20px
+
+		a
+			margin:
+				top: 5px
+				bottom: 5px
+			color: $dark-gray
+
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			display: block
+			height: calc(100% - 11px)
+			border-right: 2px solid $light-gray
+
+	.category-label
+		position: relative
+		display: inline-block
+		padding: 8px 10px
+		background: $light-gray
+		color: $dark-gray
+		font:
+			family: $font-sans
+			weight: 700
+			size: 11px
+		line-height: 14px
+		letter-spacing: 1px
+		white-space: nowrap
+		word-break: normal
+		word-wrap: normal
+		text-transform: uppercase
+		transition: color .2s ease, background-color .2s ease
+		+hover
+			background: $semi-light-gray
+			color: $black
+
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: -2px
+			height: 14px
+			width: 4px
+			background: $red

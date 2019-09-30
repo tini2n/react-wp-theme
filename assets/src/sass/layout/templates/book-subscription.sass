@@ -1,0 +1,59 @@
+.book-subscription
+	padding: 40px 0
+	+breakpoint-max(767)
+		padding: 20px 0
+
+	& + .loading
+		display: none
+
+	.page-heading
+		margin-bottom: 30px
+
+	.description
+		margin-bottom: 30px
+		font:
+			family: $font-ibm
+			size: 18px
+		line-height: 28px
+
+	.paywall
+		width: 1100 / 800 * 100%
+		margin: 40px 0
+		box-shadow: none
+		+breakpoint-max(1024)
+			width: 100%
+
+		.item
+			+breakpoint-max(1024)
+				padding: 10px
+
+		strong
+			+breakpoint-max(1024)
+				width: calc(100% + 20px)
+
+		.prom-label
+
+			span
+				+breakpoint-max(1024)
+					right: -10px
+
+	.items-container
+		padding: 0
+
+	.plus-label
+		display: flex
+		background: transparent
+		padding: 0
+
+		.icon
+			padding: 5px 5px 1px 10px
+			border: 1px solid $light-gray
+				radius: 15px 0 0 15px
+
+		span
+			background: $light-gray
+			color: $dark-gray
+			padding: 7px 15px 7px 10px
+			border:
+				radius: 0 15px 15px 0
+			font-size: 13px

@@ -1,0 +1,29 @@
+.log-in
+	padding: 0 20px
+	border:
+		left: 1px solid $carnation
+		right: 1px solid $carnation
+	+breakpoint-max(767)
+		display: none
+
+	.item
+		text-transform: uppercase
+		font:
+			size: 14px
+			weight: 700
+		transition: box-shadow .2s ease, opacity .2s ease
+		+hover
+			opacity: .8
+		+breakpoint-max(767)
+			font-size: 12px
+
+		&.cta
+			display: inline-block
+			padding: 6px 20px
+			margin-right: 20px
+			background: $carnation
+			border-radius: 20px
+			box-shadow: 0 0 5px 0 rgba($black, .1)
+			+hover
+				opacity: 1
+				box-shadow: 0 5px 5px 0 rgba($black, .1)

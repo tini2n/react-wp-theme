@@ -1,0 +1,61 @@
+.last-videos
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+	width: 100vw
+	padding: 40px 0
+	margin-bottom: 40px
+	background: $dark-gray
+	color: $white
+	+breakpoint-max(767)
+		padding: 20px 0
+
+	.video-item
+		+breakpoint-max(767)
+			margin-bottom: 15px
+
+	.thumbnail-container
+		cursor: pointer
+
+	.text-container
+		pointer-events: none
+
+	.section-title
+		color: $white
+		margin-bottom: 30px
+
+	.button
+		background: rgba($light-gray, .2)
+		color: $white
+
+	.slick-slider
+		margin-bottom: 0
+
+	.slick-list
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+		width: calc(100% + 30px)
+
+	.slick-slide
+		padding: 0 15px
+
+		&:nth-child(1)
+			padding-left: 15px
+
+	.posts-slider
+		margin-bottom: 0
+
+	.excerpt
+		max-height: 66px
+		overflow: hidden
+
+	.slider-nav
+		+breakpoint-max(767)
+			margin-bottom: 15px
+
+		&:after
+			display: none
+
+		button
+			background: rgba($white, .2)

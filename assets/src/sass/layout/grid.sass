@@ -1,0 +1,21 @@
+$grid-cols: 6
+$grid-container: 1020
+$grid-gutter: 30
+$col-width: 175
+
+.grid-container
+	display: block
+	margin-right: -$grid-gutter / $grid-container * 100%
+	margin-bottom: 15px
+	+clearfix
+	+breakpoint-max(767)
+		margin-right: 0
+
+	@for $i from 1 through $grid-cols
+		.grid-#{$i}-#{$grid-cols}
+			float: left
+			width: ($col-width * $i - $grid-gutter) / ($grid-container + $grid-gutter) * 100%
+			margin-right: $grid-gutter / ($grid-container + $grid-gutter) * 100%
+			+breakpoint-max(767)
+				width: 100%
+				margin-right: 0

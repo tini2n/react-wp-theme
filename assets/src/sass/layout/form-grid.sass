@@ -1,0 +1,47 @@
+.form-grid
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+	[class^="grid"]
+		margin-bottom: 20px
+		+breakpoint-max(767)
+			width: 100% !important
+
+	.grid-1-4
+		width: 185 / 800 * 100%
+
+	.grid-2-4
+		width: 390 / 800 * 100%
+
+	.grid-4-4
+		width: 100%
+
+	.checkbox-item
+		border: 0
+		height: 100%
+
+		a
+			margin-left: 5px
+			text-decoration: underline
+			+hover
+				text-decoration: none
+
+		label
+			display: flex
+			align-items: center
+			height: 100%
+			padding: 0 0 0 50px
+			font:
+				size: 14px
+				weight: 400
+			line-height: 15px
+			text-transform: none
+			+breakpoint-max(400)
+				flex-wrap: wrap
+				width: 110%
+				padding: 0 0 0 40px
+
+		span
+			left: 0
+			right: auto

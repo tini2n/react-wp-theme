@@ -1,0 +1,73 @@
+.contact-form
+
+	.success-msg
+		color: $green
+
+	.heading
+		margin-bottom: 50px
+		+breakpoint-max(767)
+			margin-bottom: 20px
+
+		p
+			font-family: $font-ibm
+
+	h3
+		margin-bottom: 10px
+		font:
+			family: $font-sans
+			size: 18px
+			weight: 700
+		line-height: 28px
+		text-transform: uppercase
+
+	textarea
+		min-height: 140px
+		resize: none
+
+	.captcha
+
+		& > div > div
+			+breakpoint-max(767)
+				position: relative
+				left: 50%
+				transform: translateX(-50%)
+
+	.submit
+		display: block
+		width: 100%
+		padding: 13px 20px
+		border-radius: 20px
+		background: $red
+		color: $white
+		font:
+			family: $font-sans
+			size: 14px
+			weight: 700
+		text:
+			align: center
+			transform: uppercase
+		line-height: 1
+		cursor: pointer
+		transition: opacity .2s ease
+		+hover
+			opacity: .8
+		+breakpoint-max(767)
+			margin-top: 20px
+
+	form
+
+		&.loading
+			position: relative
+			top: auto
+			left: auto
+			transform: none
+
+			&:before
+				background: $white
+				opacity: .5
+
+
+	.error-msg
+		font-size: 11px
+		color: $red
+		text-transform: uppercase

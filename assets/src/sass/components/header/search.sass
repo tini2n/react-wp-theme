@@ -1,0 +1,59 @@
+.search-bar
+	position: relative
+	margin-left: auto
+	+breakpoint-max(767)
+		position: static
+
+	&.open
+
+		input
+			transform: translateY(-50%) scaleX(1)
+			+breakpoint-max(767)
+				transform: translateY(100%) scaleY(1)
+
+	.icon
+		position: relative
+		padding: 16px 30px
+		cursor: pointer
+		z-index: 11
+		+breakpoint-max(767)
+			padding: 16px 10px
+
+	input
+		position: absolute
+		top: 50%
+		right: -1px
+		display: block
+		height: 60px
+		width: 700px
+		padding: 0 25px
+		background: $semi-red
+		color: $white
+		font:
+			family: $font-sans
+			size: 16px
+			weight: 600
+		line-height: 2
+		transform: translateY(-50%) scaleX(0)
+		transform-origin: right
+		transition: transform .2s ease
+		z-index: 10
+		+placeholder
+			color: $white
+		+breakpoint-max(1290)
+			width: 600px
+		+breakpoint-max(1150)
+			width: 590px
+		+breakpoint-max(1040)
+			width: 440px
+		+breakpoint-max(800)
+			width: 250px
+		+breakpoint-max(767)
+			top: auto
+			bottom: 0
+			right: 0
+			width: 100%
+			height: 50px
+			padding: 10px 25px
+			transform: translateY(100%) scaleY(0)
+				origin: top

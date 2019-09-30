@@ -1,0 +1,93 @@
+.subscription-item
+	display: flex
+	align-items: center
+	padding: 10px 20px
+	border: 2px solid $medium-light-gray
+		radius: 5px
+	cursor: pointer
+	transition: border-color .2s ease
+
+	&.active
+		border-color: $red
+
+		i
+			color: $white
+
+			&:before
+				opacity: 1
+
+	i
+		position: relative
+		z-index: 1
+
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: -20px
+			width: calc(100% + 35px)
+			height: calc(100% + 10px)
+			border-radius: 0 15px 15px 0
+			background: $red
+			opacity: 0
+			transition: opacity .2s ease
+			z-index: -1
+
+	i, p, .price
+		letter-spacing: -.15px
+
+	i, p
+		display: inline-block
+		font-family: $font-sans !important
+		font-size: 14px
+		line-height: 20px
+
+	.price
+		display: block
+		font:
+			family: $font-ibm
+			weight: 700
+			size: 18px
+		line-height: 25px
+		letter-spacing: -.15px
+
+		strong
+			font-size: 30px
+
+	.text-container,
+	.radio
+		pointer-events: none
+
+	.text-container
+		width: 100%
+
+	.radio
+		position: relative
+
+		span
+			display: block
+			width: 24px
+			height: 24px
+			border: 2px solid $semi-light-gray
+			transition: border-color .2s ease
+
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+				width: 14px
+				height: 10px
+				background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDE0IDEwIj4gIDxwYXRoIGlkPSJvay1pY29uIiBmaWxsPSIjZGUzMDJmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGRhdGEtbmFtZT0ib2staWNvbiIgY2xhc3M9ImNscy0xIiBkPSJNMTE5NC42MSwyMDIuMTg3bC03LjYyLDcuNDMxYTEuMzUxLDEuMzUxLDAsMCwxLTEuODcsMEwxMTgxLjM4LDIwNmExLjI0NSwxLjI0NSwwLDAsMSwwLTEuODEsMS4zNTEsMS4zNTEsMCwwLDEsMS44NywwbDIuODEsMi43MTcsNi42Ny02LjUyOGExLjM2NiwxLjM2NiwwLDAsMSwxLjg4LDBBMS4yNjQsMS4yNjQsMCwwLDEsMTE5NC42MSwyMDIuMTg3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExODEgLTIwMCkiLz48L3N2Zz4=)
+				opacity: 0
+				transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1)
+
+		[type="radio"]
+			display: none
+
+			&:checked
+
+				& + span:before
+					opacity: 1
